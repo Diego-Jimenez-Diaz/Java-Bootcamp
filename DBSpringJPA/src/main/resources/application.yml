@@ -1,19 +1,33 @@
 server:
   port: 8080
 
-
-## Postgres --------Configuration----------
-spring:
-  jpa:
-    hibernate:
-      ddl-auto: create #none - create borra la DB y la inicia de 0!!
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-  datasource:
+## Postgres --------file to Configuration----------
+travel:
+  db:
+    driver: org.hibernate.dialect.PostgreSQLDialect
+    password: pass
     url: "jdbc:postgresql://localhost:5432/postgres"
     username: postgres
-    password: pass
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  show_sql: false
+  hbm2ddl:
+    auto: none
+entitymanager:
+  packagesToScan: com.diegojimenez.DBSpringJPa.entity
 
-## H2 --------Configuration----------
+## Postgres --------Basic Configuration----------
+#spring:
+#  jpa:
+#    hibernate:
+#      ddl-auto: create #none - create borra la DB y la inicia de 0!!
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  datasource:
+#    url: "jdbc:postgresql://localhost:5432/postgres"
+#    username: postgres
+#    password: pass
+
+## H2 --------Basic Configuration----------
 
 #spring:
 #  jpa:
