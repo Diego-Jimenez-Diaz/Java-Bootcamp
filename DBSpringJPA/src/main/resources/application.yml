@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+
+## Postgres --------Configuration----------
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create #none - create borra la DB y la inicia de 0!!
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/postgres"
+    username: postgres
+    password: pass
+
+## H2 --------Configuration----------
+
+#spring:
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: password
+#  h2:
+#    console:
+#      enabled: true
+## H2 --------Configuration----------
